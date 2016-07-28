@@ -28,6 +28,11 @@ services:
   postgres:
     image: postgres:9.5
 
+  nginx:
+    build:
+      context: ./services/nginx
+      dockerfile: ./Dockerfile
+
   web:
     extends: base
     links:
